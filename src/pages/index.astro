@@ -1,17 +1,5 @@
 ---
-// Component Imports
-import Tour from '../components/Tour.astro';
-// You can import components from any supported Framework here!
-
-
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+let title = 'My Dragonfly Site';
 ---
 <html lang="en">
 <head>
@@ -38,21 +26,11 @@ let title = 'My Astro Site';
         <header>
             <div>
                 <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-                <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
+                <h1>Built with  <a href="https://astro.build/">Astro</a></h1>
             </div>
         </header>
 
-        <Tour />
-
-        <!--
-           - You can also use imported framework components directly in your markup!
-           -
-           - Note: by default, these components are NOT interactive on the client.
-           - The `:visible` directive tells Astro to make it interactive.
-           -
-           - See https://docs.astro.build/core-concepts/component-hydration/ 
-           -->
-
+<a href="/species">List of species</a>
     </main>
 </body>
 </html>

@@ -1,0 +1,23 @@
+---
+import { SpecieDetails} from '../../components/SpecieDetails.tsx';
+import { getSpecies } from '../../api/getSpecies.ts'
+import { getSpecie } from '../../api/getSpecie.ts'
+
+export async function getStaticPaths() {
+    const data =  await getSpecies()
+    return data.species.map((s) => ({
+        params: { scientific_name: s.scientific_name },
+    }));
+}
+
+const {scientific_name} = Astro.request.params;
+
+const data  = await getSpecie(scientific_name);
+console.log(123, data)
+
+---
+
+
+<h1>{scientific_name}</h1>
+
+<SpecieDetails specie={ data.specieFromScientificName } />

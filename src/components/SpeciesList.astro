@@ -1,0 +1,8 @@
+---
+import { Species } from './species.jsx'
+import { getSpecies } from '../api/getSpecies.ts'
+
+const data = await getSpecies();
+---
+
+<Species data={data.species} />
