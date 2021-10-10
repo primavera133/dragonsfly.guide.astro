@@ -1,0 +1,36 @@
+---
+// import ListLink from './ListLink'
+import LogoHexagon from '../LogoHexagon/LogoHexagon.astro'
+---
+<style lang="scss">
+@use './header';
+</style>
+<header class="header">
+  <div class="header-wrapper">
+    <LogoHexagon />
+    <h3 class="h3">
+      <a class="header-link" href='/'>Dragonfly Guide</a>
+    </h3>
+    children
+  </div>
+
+  <div class="menu">
+    <div class="menu-list">
+      <a href='/'>
+        Home
+      </a>
+      <a href='/families/'>
+        Families
+      </a>
+      <a href='/genera/'>
+        Genera
+      </a>
+      <a href='/species/'>
+        Species
+      </a>
+      <a href='/about/'>
+        About
+      </a>
+    </div>
+  </div>
+</header>

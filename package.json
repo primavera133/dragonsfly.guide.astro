@@ -3,15 +3,22 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "predev": "npm run typography",
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "npm run typography",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "typography": "node ./src/scripts/typography.js"
   },
   "devDependencies": {
     "@astrojs/renderer-react": "^0.2.2",
     "astro": "^0.20.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "typography": "^0.16.21",
+    "typography-theme-lincoln": "^0.16.19"
   }
 }

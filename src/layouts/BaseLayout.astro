@@ -1,0 +1,42 @@
+---
+import Header from '../components/Header/Header.astro'
+const {title} = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{title}</title>
+    <meta property="og:title" content={title}>
+    <!-- <meta property="og:type" content=""> -->
+    <!-- <meta property="og:url" content=""> -->
+    <!-- <meta property="og:image" content=""> -->
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <meta name="theme-color" content="#fafafa">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href="/style/typography.css">
+
+    <style lang="scss">
+      @use './base.scss';
+    </style>
+  </head>
+  <body>
+  <div class="wrapper">
+    <Header class="header"></Header>
+    <aside class="first-column"></aside>
+    <main class="middle-column">
+        <!-- slot: your page content will be injected here. -->
+        <slot />
+    </main>
+    <aside class="third-column"></aside>
+    <footer class="footer"></footer>
+  </div>
+  </body>
+</html>
